@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        kufam: ['var(--font-kufam)'],
+        inter: ['var(--font-inter'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
