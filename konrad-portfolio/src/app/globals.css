@@ -65,3 +65,22 @@ body {
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
 }
+
+.nav {
+  width: 0;
+  height: 0;
+}
+
+.open-nav {
+  width: 182px;
+  height: 216px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

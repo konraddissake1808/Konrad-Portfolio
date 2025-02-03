@@ -2,10 +2,16 @@
 import React from 'react'
 
 function MenuButton() {
-    const hamMenu = document.getElementById('ham1');
+  
     function buttonClick() {
-        if(hamMenu) {
-            hamMenu?.classList.toggle('active');
+        const hamMenu = document.getElementById('ham1');
+        const nav = document.getElementById('nav');
+        const navLinks = document.getElementById('nav-links');
+        if(hamMenu){
+            hamMenu.classList.toggle('active');
+            nav?.classList.toggle('open-nav');
+            navLinks?.classList.toggle('hidden');
+            navLinks?.classList.toggle('opacity-0');
         }
     }
 

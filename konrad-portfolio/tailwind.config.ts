@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         kufam: ['var(--font-kufam)'],
-        inter: ['var(--font-inter'],
+        inter: ['var(--font-inter)'],
       },
       colors: {
         background: "var(--background)",
