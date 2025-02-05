@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Kufam, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/header";
-
+import SideNav from "./components/sideNav/sideNav";
 
 const kufam = Kufam({
   variable: "--font-kufam",
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body id="body"
         className={`${kufam.variable} ${inter.variable} h-screen antialiased`}
       >
         <div  className="h-[9%] flex items-center">
@@ -36,7 +36,9 @@ export default function RootLayout({
           <main className="h-[90%]">
             {children}
           </main>
-          <div className="h-[10%]"></div>
+          <div className="h-[10%] flex justify-center items-center">
+            <SideNav></SideNav>
+          </div>
         </div>
       </body>
     </html>

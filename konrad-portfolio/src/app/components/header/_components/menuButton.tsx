@@ -1,20 +1,44 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 function MenuButton() {
-  
+    const openMenu = useRef(false);
+
     function buttonClick() {
         const hamMenu = document.getElementById('ham1');
         const nav = document.getElementById('nav');
         const navLinks = document.getElementById('nav-links');
-        if(hamMenu){
-            hamMenu.classList.toggle('active');
-            nav?.classList.toggle('open-nav');
-            navLinks?.classList.toggle('hidden');
-            navLinks?.classList.toggle('opacity-0');
+        if(openMenu.current == false){
+            openMenu.current = true;
+            hamMenu?.classList.add('active');
+            nav?.classList.add('open-nav');
+            navLinks?.classList.remove('hidden');
+            navLinks?.classList.remove('opacity-0');
+        } else if(openMenu.current == true) {
+            openMenu.current = false;
+            hamMenu?.classList.remove('active');
+            nav?.classList.remove('open-nav');
+            navLinks?.classList.add('hidden');
+            navLinks?.classList.add('opacity-0');
         }
     }
-
+    
+    useEffect(()=>{
+        document.addEventListener('click', function outsideNavClick(e) {
+            const hamMenu = document.getElementById('ham1');
+            const nav = document.getElementById('nav');
+            const navLinks = document.getElementById('nav-links');
+            if (!nav?.contains(e.target as HTMLElement) && !hamMenu?.contains(e.target as HTMLElement)) {
+                if(openMenu.current == true) {
+                    openMenu.current = false;
+                    hamMenu?.classList.remove('active');
+                    nav?.classList.remove('open-nav');
+                    navLinks?.classList.add('hidden');
+                    navLinks?.classList.add('opacity-0');
+                }
+            }
+        })
+    })
 
   return (
     <div className='flex items-center justify-center'>

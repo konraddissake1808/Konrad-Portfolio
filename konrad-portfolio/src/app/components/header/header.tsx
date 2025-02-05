@@ -13,9 +13,9 @@ function Header() {
                 <p className='font-kufam font-normal text-[32px] h-[40px]'>KD</p>
             </button>
           </div>
-          <nav className="nav z-20 absolute right-0 top-0 flex justify-center items-center glass font-inter bg-slate-400 duration-150" id='nav'>
+          <nav className="nav z-20 absolute right-0 top-0 flex justify-center items-center glass font-inter bg-slate-400 duration-300" id='nav'>
             <div className='z-10 h-full w-4/5 flex justify-between items-center flex-col'>
-              <div id='nav-links' className='hidden opacity-0 text-center delay-150'>
+              <div id='nav-links' className='hidden opacity-0 text-center delay-200'>
                 <div className='z-20 mb-4 mt-10 nav-link'>
                   <Link href="#">Home</Link>
                 </div>
