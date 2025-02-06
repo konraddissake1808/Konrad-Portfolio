@@ -69,6 +69,7 @@ body {
 .nav {
   width: 0;
   height: 0;
+  border-radius: 16px 0 16px 16px;
 }
 
 .open-nav {
@@ -78,9 +79,16 @@ body {
 
 .glass {
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px 0 16px 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.7px);
   -webkit-backdrop-filter: blur(4.7px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#home-works-button {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(4.7px);
+  /*border: 1px solid rgba(255, 255, 255, 0.08);*/
 }
