@@ -77,6 +77,27 @@ body {
   height: 216px;
 }
 
+@media (320px < width < 376px) {
+  .open-nav {
+    width: 200px;
+    height: 216px;
+  }
+}
+
+@media (375px < width < 431px) {
+  .open-nav {
+    width: 220px;
+    height: 216px;
+  }
+}
+
+@media (431px < width < 1024px) {
+  .open-nav {
+    width: 320px;
+    height: 216px;
+  }
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

@@ -16,10 +16,10 @@ export default function Home() {
             </div>
             <div className="flex justify-around">
               <div className="h-10 w-24 flex justify-center items-center glass rounded-sm">
-                <Link className="" href='#'>About</Link>
+                <Link className="" href='/about'>About</Link>
               </div>
               <div id="home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm">
-                <Link className="" href='#'>Works</Link>
+                <Link className="" href='/works'>Works</Link>
               </div>
             </div>
           </div>
