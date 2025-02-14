@@ -3,6 +3,7 @@ import { Kufam, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/header";
 import SideNav from "./components/sideNav/sideNav";
+import { Suspense } from "react";
 
 const kufam = Kufam({
   variable: "--font-kufam",
@@ -29,14 +30,16 @@ export default function RootLayout({
       <body id="body"
         className={`${kufam.variable} ${inter.variable} h-screen antialiased`}
       >
-        <div  className="h-[9%] flex items-center">
-          <Header></Header>
+        <div  className="h-[10vh] flex items-center">
+          <Suspense fallback={<div>Loading...</div>}>
+            <Header></Header>
+          </Suspense>
         </div>
-        <div className="h-[91%]">
-          <main className="h-[90%]">
+        <div className="relative">
+          <main className="">
             {children}
           </main>
-          <div className="h-[10%] flex justify-center items-center">
+          <div className="h-[10vh] flex justify-center items-center bottom-0 w-full sticky">
             <SideNav></SideNav>
           </div>
         </div>

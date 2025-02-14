@@ -1,21 +1,21 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function MenuButton() {
-    const openMenu = useRef(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     function buttonClick() {
         const hamMenu = document.getElementById('ham1');
         const nav = document.getElementById('nav');
         const navLinks = document.getElementById('nav-links');
-        if(openMenu.current == false){
-            openMenu.current = true;
+        if(openMenu == false){
+            setOpenMenu(true);
             hamMenu?.classList.add('active');
             nav?.classList.add('open-nav');
             navLinks?.classList.remove('hidden');
             navLinks?.classList.remove('opacity-0');
-        } else if(openMenu.current == true) {
-            openMenu.current = false;
+        } else if(openMenu == true) {
+            setOpenMenu(false);
             hamMenu?.classList.remove('active');
             nav?.classList.remove('open-nav');
             navLinks?.classList.add('hidden');
@@ -29,8 +29,8 @@ function MenuButton() {
             const nav = document.getElementById('nav');
             const navLinks = document.getElementById('nav-links');
             if (!nav?.contains(e.target as HTMLElement) && !hamMenu?.contains(e.target as HTMLElement)) {
-                if(openMenu.current == true) {
-                    openMenu.current = false;
+                if(openMenu == true) {
+                    setOpenMenu(false);
                     hamMenu?.classList.remove('active');
                     nav?.classList.remove('open-nav');
                     navLinks?.classList.add('hidden');
