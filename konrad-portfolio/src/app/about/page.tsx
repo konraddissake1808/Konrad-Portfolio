@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Arrow from '../../../public/arrow-next-small-svgrepo-com.svg'
 
 function About() {
   return (
@@ -21,7 +23,17 @@ function About() {
           </div>
           <div className='h-64 flex flex-col items-center justify-center'>
             <div className='h-full w-full grid grid-cols-1 grid-rows-3'>
-              <div className='col-start-1 row-start-1' id='frontend-container'></div>
+              <div className='col-start-1 row-start-1' id='frontend-container'>
+                <div>
+                  <div>
+                    <p>Frontend Technologies</p>
+                  </div>
+                  <div>
+                    <Image src={Arrow} alt='Arrow' />
+                  </div>
+                  <div></div>
+                </div>
+              </div>
               <div className='col-start-1 row-start-2' id='backend-container'></div>
               <div className='col-start-1 row-start-3' id='devops-container'></div>
             </div>
