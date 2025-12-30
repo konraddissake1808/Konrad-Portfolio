@@ -7,8 +7,20 @@ function About() {
     <div>
       <div>
         <div>
+          <div className='h-[80vh] w-full flex flex-col items-center justify-center mb-24'>
+            <div className='flex flex-col items-center justify-center mb-10 h-full'>
+              <div>
+                <h1 className='text-5xl'>About</h1>
+              </div>
+              <div className='flex flex-col items-center justify-center mt-4'>
+                <div className='w-4/5 text-center'>
+                  <p>In this section is a presentation of myself, and technologies I use</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id='about-photo-container' className='w-full h-72 flex justify-center items-center mb-10'>
-            <div id='about-photo' className='w-4/5 h-full bg-contain bg-no-repeat bg-center'></div>
+            <div id='about-photo' className='w-[288px] h-full bg-cover bg-no-repeat bg-top'></div>
           </div>
           <div className='flex flex-col items-center'>
             <div className='w-4/5 mb-10'>
