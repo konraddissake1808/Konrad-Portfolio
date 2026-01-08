@@ -117,3 +117,31 @@ body {
 #about-photo {
   background-image: url('../../public/IMG_9484.jpg');
 }
+
+.animated {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#firstAnimation {
+  animation-delay: 0;
+}
+
+#secondAnimation {
+  animation-delay: 0.75s;
+}
+
+#thirdAnimation {
+  animation-delay: 1.5s;
+}

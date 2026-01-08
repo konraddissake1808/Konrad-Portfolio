@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Kufam, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
-import SideNav from "./components/sideNav/sideNav";
+import Header from "../components/header/header";
+import SideNav from "../components/sideNav/sideNav";
 import { Suspense } from "react";
 
 const kufam = Kufam({
