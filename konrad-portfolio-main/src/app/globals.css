@@ -145,3 +145,10 @@ body {
 #thirdAnimation {
   animation-delay: 1.5s;
 }
+
+#resume-button {
+  background: rgba(163, 22, 22, 0.00);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(4.7px);
+}

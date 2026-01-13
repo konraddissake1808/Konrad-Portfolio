@@ -1,6 +1,8 @@
+'use client';
 import React from 'react'
 import Image from 'next/image'
 import Arrow from '../../../public/arrow-next-small-svgrepo-com.svg'
+import ResumeButton from '@/components/resumeButton/ResumeButton'
 
 function About() {
 
@@ -20,7 +22,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className='h-[80vh]'>
+          <div className=''>
             <div id='about-photo-container' className='w-full h-72 flex justify-center items-center mb-10'>
               <div id='about-photo' className='w-[288px] h-full bg-cover bg-no-repeat bg-top'></div>
             </div>
@@ -29,6 +31,9 @@ function About() {
                 <p className='mb-4'>I am Konrad Dissake, a Fullstack Web Developer and Software Engineer from Douala, Cameroon.</p>
                 <p>I am a self-taught developer with a passion for learning and building new things starting my coding journey since 2021.</p>
               </div>
+            </div>
+            <div className='flex justify-center mb-20'>
+              <ResumeButton />
             </div>
           </div>
         
