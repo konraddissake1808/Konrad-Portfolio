@@ -152,3 +152,12 @@ body {
   backdrop-filter: blur(2.3px);
   -webkit-backdrop-filter: blur(4.7px);
 }
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.noScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

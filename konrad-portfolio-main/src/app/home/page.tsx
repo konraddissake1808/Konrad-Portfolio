@@ -33,20 +33,20 @@ function Homepage() {
             <div id="content" className="z-10 h-full w-full flex justify-center items-center">
             <div className="flex flex-col">
                 <div className="mb-8">
-                <div className="text-center">
-                    <p id='firstAnimation' className="text-4xl mb-1 animated">Konrad Dissake</p>
-                </div>
-                <div>
-                    <p id='secondAnimation' className="text-lg text-center animated duration-200">{roles}</p>
-                </div>
-                </div>
-                <div id='thirdAnimation' className="flex justify-around animated">
-                <div className="h-10 w-24 flex justify-center items-center glass rounded-sm">
-                    <Link className="" href='/about'>About</Link>
-                </div>
-                <div id="home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm">
-                    <Link className="" href='/works'>Works</Link>
-                </div>
+                    <div className="text-center">
+                        <p id='firstAnimation' className="text-4xl mb-1 animated">Konrad Dissake</p>
+                    </div>
+                    <div>
+                        <p id='secondAnimation' className="text-lg text-center animated duration-200">{roles}</p>
+                    </div>
+                    </div>
+                    <div id='thirdAnimation' className="flex justify-around animated">
+                    <div className="h-10 w-24 flex justify-center items-center glass rounded-sm">
+                        <Link className="" href='/about'>About</Link>
+                    </div>
+                    <div id="home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm">
+                        <Link className="" href='/works'>Works</Link>
+                    </div>
                 </div>
             </div>
             </div>

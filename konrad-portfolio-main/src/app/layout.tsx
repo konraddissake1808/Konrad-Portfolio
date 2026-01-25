@@ -28,14 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body"
-        className={`${kufam.variable} ${inter.variable} h-screen antialiased`}
+        className={`${kufam.variable} ${inter.variable} relative h-screen antialiased`}
       >
-        <div  className="h-[10vh] flex items-center">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header></Header>
-          </Suspense>
-        </div>
+        
         <div className="relative">
+          <div className="sticky z-40 top-0">
+            <div className="relative h-[10vh] flex items-center">
+              <Suspense fallback={<div>Loading...</div>}>
+                <Header></Header>
+              </Suspense>
+            </div>
+          </div>
           <main className="">
             {children}
           </main>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <div className='h-full w-full flex items-center'>
+    <div className='h-full w-full flex items-center relative'>
         <header className="h-full w-full flex items-center justify-between relative">
           <div id="logo" className="w-[20%] ml-5 pt-[6px]">
             <Link href="/" className='font-kufam font-normal text-[32px] leading-none'>KD</Link>
