@@ -1,12 +1,25 @@
 'use client';
-import React from 'react'
+import React, { useEffect } from 'react'
 import MenuButton from './_components/menuButton';
 import Link from 'next/link';
 
 
 function Header() {
+ 
+  useEffect(()=> {
+    const navBar = document.getElementById('topNav');
+
+    document.addEventListener('scroll', function() {
+        if(window.scrollY > 10) {
+            navBar?.classList.add('scrolled');
+        } else {
+            navBar?.classList.remove('scrolled');
+        }
+    });
+  })
+
   return (
-    <div className='h-full w-full flex items-center relative'>
+    <div id='topNav' className='h-full w-full flex items-center relative z-50 duration-300 backdrop-blur-sm'>
         <header className="h-full w-full flex items-center justify-between relative">
           <div id="logo" className="w-[20%] ml-5 pt-[6px]">
             <Link href="/" className='font-kufam font-normal text-[32px] leading-none'>KD</Link>

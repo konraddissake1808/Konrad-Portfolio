@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import englishIcon from '../../../public/flag-us-gb.svg'
 import frenchIcon from '../../../public/flag-for-flag-france-svgrepo-com.svg'
@@ -19,6 +19,16 @@ function ResumeButton() {
         window.open('/Konrad Dissake.pdf', '_blank');
     }
 
+    useEffect(() => {
+        document.addEventListener('click', function outsideMenuClick(e){
+            const resumeButton = document.getElementById('resume-button');
+            const resumeDropdown = dropdownRef.current;
+            if(!resumeButton?.contains(e.target as HTMLElement)) {
+                resumeDropdown?.classList.add('hidden');
+            }
+        })
+    });
+
   return (
     <div className='relative'>
         <div id="resume-button" className="h-12 w-40 flex justify-center items-center rounded-sm" onClick={ResumeLanguagesDropdown}>
@@ -31,18 +41,18 @@ function ResumeButton() {
                 </div>
             </div>
         </div>
-        <div ref={dropdownRef} className='hidden absolute right-[-80px] top-[-20px]'>
-            <div>
+        <div ref={dropdownRef} className='hidden absolute right-[0px] top-[-86px] glass rounded-md'>
+            <div className='py-2 px-4'>
                 <button className='flex justify-center items-center' onClick={handleClickEn}>
-                    <p>English</p>
-                    <div className='w-5 h-5'>
+                    <p className='mx-1'>English</p>
+                    <div className='w-5 h-5 flex justify-center items-center'>
                         <Image alt='' src={englishIcon} />
                     </div>
                 </button>
             </div>
-            <div>
+            <div className='py-2 px-4'>
                 <button className='flex justify-center items-center' onClick={handleClickFr}>
-                    <p>Français</p>
+                    <p className='mx-1'>Français</p>
                     <div className='w-5 h-5'>
                         <Image alt='' src={frenchIcon} />
                     </div>

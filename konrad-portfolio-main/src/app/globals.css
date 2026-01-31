@@ -147,7 +147,7 @@ body {
 }
 
 #resume-button {
-  background: rgba(163, 22, 22, 0.00);
+  background: rgba(163, 22, 22, 0.001);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.3px);
   -webkit-backdrop-filter: blur(4.7px);
@@ -160,4 +160,22 @@ body {
 .noScrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+#topNav {
+  background: rgba(255, 255, 255, 0.001);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur();
+  -webkit-backdrop-filter: blur(4.7px);
+  /*backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);*/
+}
+
+#topNav.scrolled {
+  background: rgba(255, 255, 255, 0.175);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /*backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);*/
 }
