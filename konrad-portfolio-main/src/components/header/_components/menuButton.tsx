@@ -32,7 +32,7 @@ function MenuButton() {
             const hamMenu = document.getElementById('ham1');
             const nav = document.getElementById('nav');
             const navLinks = document.getElementById('nav-links');
-            const dropdownNavButton = document.getElementById('dropdownNavButton');
+            //const dropdownNavButton = document.getElementById('dropdownNavButton');
             if (!nav?.contains(e.target as HTMLElement) && !hamMenu?.contains(e.target as HTMLElement)) {
                 if(openMenu == true) {
                     setOpenMenu(false);

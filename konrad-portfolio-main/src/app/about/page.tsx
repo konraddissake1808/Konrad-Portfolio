@@ -8,7 +8,7 @@ import Link from "next/link";
 function About() {
 
   return (
-    <div className='mb-10 '>
+    <div className=''>
       <div>
         <div>
           <div className='w-full flex flex-col items-center justify-center mb-16'>

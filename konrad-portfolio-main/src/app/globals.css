@@ -11,6 +11,7 @@
   :root {
     --background: #000000;
     --foreground: #ededed;
+    --contactOptionBg: #222222;
   }
 }
 
@@ -18,6 +19,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
 }
 
 #background-image {
@@ -75,6 +78,7 @@ body {
 .open-nav {
   width: 182px;
   height: 216px;
+  overflow: hidden;
 }
 
 @media (320px < width < 376px) {
@@ -118,7 +122,7 @@ body {
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(4.7px);
-  backdrop-filter: blur(2.3px);
+  backdrop-filter: blur(4px);
   /*border: 1px solid rgba(255, 255, 255, 0.08);*/
 }
 
@@ -209,4 +213,31 @@ body {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactInput {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+}
+
+#contactSendButton {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: fit-content;
+} 
+
+.subjectOption {
+  background: var(--contactOptionBg);
+  color: var(--foreground);
 }

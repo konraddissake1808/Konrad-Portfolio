@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <div id='topNav' className='w-full h-full relative flex items-center duration-300'>  
-      <div className=''>
+      <div className='overflow-hidden'>
         <nav id='nav' className="nav glass z-40 absolute right-0 top-0 flex justify-center items-center font-inter duration-300">
           <div className='z-50 h-full w-4/5 flex justify-between items-center flex-col'>
             <div id='nav-links' className='hidden opacity-0 text-center delay-200'>

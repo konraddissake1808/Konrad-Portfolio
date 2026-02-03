@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body"
-        className={`${kufam.variable} ${inter.variable} relative h-screen antialiased`}
+        className={`${kufam.variable} ${inter.variable} relative h-screen antialiased flex flex-col justify-between`}
       >
         
         <div className="relative">
@@ -39,10 +39,10 @@ export default function RootLayout({
               </Suspense>
             </div>
           </div>
-          <main className="">
+          <main className="overfow-hidden min-h-[80vh]">
             {children}
           </main>
-          <div className="h-[10vh] flex justify-center items-center bottom-0 w-full sticky">
+          <div className="h-[10vh] flex justify-center items-center w-full z[100] sticky bottom-0">
             <SideNav></SideNav>
           </div>
         </div>
