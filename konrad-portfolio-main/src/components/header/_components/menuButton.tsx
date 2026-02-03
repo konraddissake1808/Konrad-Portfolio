@@ -1,6 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
+interface MenuButton {
+    menuState?: boolean;
+}
+
 function MenuButton() {
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -28,6 +32,7 @@ function MenuButton() {
             const hamMenu = document.getElementById('ham1');
             const nav = document.getElementById('nav');
             const navLinks = document.getElementById('nav-links');
+            const dropdownNavButton = document.getElementById('dropdownNavButton');
             if (!nav?.contains(e.target as HTMLElement) && !hamMenu?.contains(e.target as HTMLElement)) {
                 if(openMenu == true) {
                     setOpenMenu(false);
@@ -35,14 +40,31 @@ function MenuButton() {
                     nav?.classList.remove('open-nav');
                     navLinks?.classList.add('hidden');
                     navLinks?.classList.add('opacity-0');
+                    //dropdownNavButton?.classList.remove('hidden')
                 }
+            }
+        })
+        document.addEventListener('click', function(event) {
+            const hamMenu = document.getElementById('ham1');
+            const nav = document.getElementById('nav');
+            const navLinks = document.getElementById('nav-links');
+            const home = document.getElementById('home');
+            const about = document.getElementById('about');
+            const work = document.getElementById('work');
+            const contact = document.getElementById('contact');
+            if(home?.contains(event.target as HTMLElement)||about?.contains(event.target as HTMLElement)||work?.contains(event.target as HTMLElement)||contact?.contains(event.target as HTMLElement)) {
+            setOpenMenu(false);
+            hamMenu?.classList.remove('active');
+            nav?.classList.remove('open-nav');
+            navLinks?.classList.add('hidden');
+            navLinks?.classList.add('opacity-0');
             }
         })
     })
 
   return (
-    <div className='flex items-center justify-center'>
-        <svg className="ham hamRotate ham1 w-12" id='ham1' onClick={buttonClick} viewBox="0 0 100 100">
+    <div className='flex items-center justify-center z-50'>
+        <svg className="ham hamRotate ham1 w-12 z-50" id='ham1' onClick={buttonClick} viewBox="0 0 100 100">
             <path
         className="line top"
         d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
