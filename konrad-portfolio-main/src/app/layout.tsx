@@ -3,6 +3,7 @@ import { Kufam, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header/header";
 import SideNav from "../components/sideNav/sideNav";
+import Footer from "../components/footer/footer";
 import { Suspense } from "react";
 
 const kufam = Kufam({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body"
-        className={`${kufam.variable} ${inter.variable} relative h-screen antialiased flex flex-col justify-between`}
+        className={`${kufam.variable} ${inter.variable} relative h-screen w-full antialiased flex flex-col justify-between`}
       >
         
         <div className="relative">
@@ -44,6 +45,9 @@ export default function RootLayout({
           </main>
           <div className="h-[10vh] flex justify-center items-center w-full z[100] sticky bottom-0">
             <SideNav></SideNav>
+          </div>
+          <div>
+            <Footer></Footer>
           </div>
         </div>
       </body>

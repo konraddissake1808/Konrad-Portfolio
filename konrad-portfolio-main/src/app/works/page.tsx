@@ -17,8 +17,9 @@ function Works() {
           </div>
         </div>   
       </div>
-      <div className='flex justify-center'>
+      <div className='flex justify-center min-h-[80vh]'>
         <div className='rounded-lg w-4/5 h-3/5 flex items-center justify-center glass'>
+        <a href="https://weather-clae6i6kc-konrad-dissakes-projects.vercel.app/">
           <div className='flex flex-col items-center'>
             <div className='rounded-lg mb-4'>
               <Image className='rounded-t-lg' src={weatherAppImage} alt="" />
@@ -110,6 +111,7 @@ function Works() {
               </div>
             </div>
           </div>
+        </a>  
         </div>
       </div>
     </div>

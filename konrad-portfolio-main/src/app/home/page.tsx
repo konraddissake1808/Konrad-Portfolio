@@ -133,6 +133,21 @@ function Homepage() {
       };
     }, [currentJobIndex, clearAllIntervals]);
 
+    useEffect(() => {
+      const homeAboutButton = document.getElementById('home-about-button');
+      const homeWorksButton = document.getElementById('home-works-button');
+
+      onload = () => {
+        if (homeAboutButton) {
+          homeAboutButton.classList.add('home-about-button') ;
+        }
+        if (homeWorksButton) {
+          homeWorksButton.classList.add('home-works-button');
+        }
+      }
+    }, []);
+
+
 
   return (
     <div className='w-full h-[80vh]'>
@@ -140,14 +155,14 @@ function Homepage() {
         <div id="content" className="z-10 h-full w-full flex justify-center items-center">
           <div className="flex flex-col">
             <div className="mb-8 flex flex-col items-center justify-center">
-              <div className="text-center">
+              <div className="text-center mb-4">
                 <p id='firstAnimation' className="text-4xl mb-1 animated">Konrad Dissake</p>
               </div>
-              <div className='w-4/5'>
-                <div id='secondAnimation' className="subtitle-container text-center animated">
+              <div className=' w-64'>
+                <div id='secondAnimation' className="subtitle-container text-center animated mb-4 h-6">
                   <p id='title'></p>
                 </div>
-                <div id='thirdAnimation' className="description animated mt-4">
+                <div id='thirdAnimation' className="description animated mb-6 h-20">
                   <div className="description-container text-center">
                     <div className="description">
                       <p id='titleDescription'>{descriptionText}</p>
@@ -155,11 +170,11 @@ function Homepage() {
                   </div>
                 </div>
               </div>
-              <div id='thirdAnimation' className="flex justify-around animated">
-                <div className="h-10 mr-6 w-24 flex justify-center items-center glass rounded-sm">
+              <div id='thirdAnimation' className="flex justify-around fade-in">
+                <div id='home-about-button' className="h-10 mr-6 w-24 flex justify-center items-center rounded-sm home-about-button">
                   <Link className="" href='/about'>About</Link>
                 </div>
-                <div id="home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm">
+                <div id="Home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm home-works-button">
                   <Link className="" href='/works'>Works</Link>
                 </div>
               </div>

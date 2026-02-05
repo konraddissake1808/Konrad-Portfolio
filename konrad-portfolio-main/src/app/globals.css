@@ -15,6 +15,8 @@
   }
 }
 
+
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -108,6 +110,7 @@ body {
   -webkit-backdrop-filter: blur(4.7px);
   backdrop-filter: blur(4.7px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background-clip: padding-box;
 }
 
 .mobile-nav-glass {
@@ -118,12 +121,24 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-#home-works-button {
-  background: rgba(255, 255, 255, 0.08);
+.home-about-button {
+  opacity: 1;
+  background-color: rgba(163, 22, 22, 0.01);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(4.7px);
-  backdrop-filter: blur(4px);
-  /*border: 1px solid rgba(255, 255, 255, 0.08);*/
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 0;
+}
+
+.home-works-button {
+  opacity: 1;
+  background: rgba(163, 22, 22, 0.01);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 0;
 }
 
 #about-photo {
@@ -240,4 +255,5 @@ body {
 .subjectOption {
   background: var(--contactOptionBg);
   color: var(--foreground);
+  border-radius: 4px;
 }
