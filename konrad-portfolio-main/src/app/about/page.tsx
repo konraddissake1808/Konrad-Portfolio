@@ -593,10 +593,10 @@ function About() {
             <div className='h-[30vh]'> 
               <div className='flex justify-center items-center h-full pb-12'>
                 <div className="flex justify-around">
-                  <div className="h-12 w-24 flex justify-center items-center glass rounded-sm mr-4">
+                  <div className="h-12 w-24 flex justify-center items-center glass rounded-xs mr-4">
                     <Link className="" href='/works'>Works</Link>
                   </div>
-                  <div id="home-works-button" className="flex justify-center items-center rounded-sm">
+                  <div id="home-works-button" className="flex justify-center items-center rounded-xs">
                     <ResumeButton />
                   </div>
                 </div>

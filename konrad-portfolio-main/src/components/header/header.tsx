@@ -50,7 +50,7 @@ function Header() {
           </div>           
         </header>
       </div>
-      <div className='h-full flex justify-center items-center w-1/5 z-[90]'>
+      <div className='h-full flex justify-center items-center w-1/5 z-90'>
         <MenuButton></MenuButton>
       </div>
     </div>

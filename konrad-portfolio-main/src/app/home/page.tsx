@@ -171,10 +171,10 @@ function Homepage() {
                 </div>
               </div>
               <div id='thirdAnimation' className="flex justify-around fade-in">
-                <div id='home-about-button' className="h-10 mr-6 w-24 flex justify-center items-center rounded-sm home-about-button">
+                <div id='home-about-button' className="h-10 mr-6 w-24 flex justify-center items-center rounded-xs home-about-button">
                   <Link className="" href='/about'>About</Link>
                 </div>
-                <div id="Home-works-button" className="h-10 w-24 flex justify-center items-center rounded-sm home-works-button">
+                <div id="Home-works-button" className="h-10 w-24 flex justify-center items-center rounded-xs home-works-button">
                   <Link className="" href='/works'>Works</Link>
                 </div>
               </div>

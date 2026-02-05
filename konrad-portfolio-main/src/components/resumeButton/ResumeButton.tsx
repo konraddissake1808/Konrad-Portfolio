@@ -31,7 +31,7 @@ function ResumeButton() {
 
   return (
     <div className='relative'>
-        <div id="resume-button" className="h-12 w-40 flex justify-center items-center rounded-sm" onClick={ResumeLanguagesDropdown}>
+        <div id="resume-button" className="h-12 w-40 flex justify-center items-center rounded-xs" onClick={ResumeLanguagesDropdown}>
             <div className="flex items-center gap-2 mx-4">
                 <p>View Resume</p>
                 <div>
@@ -41,7 +41,7 @@ function ResumeButton() {
                 </div>
             </div>
         </div>
-        <div ref={dropdownRef} className='hidden absolute right-[0px] top-[-86px] glass rounded-md'>
+        <div ref={dropdownRef} className='hidden absolute right-0 top-[-86px] glass rounded-md'>
             <div className='py-2 px-4'>
                 <button className='flex justify-center items-center' onClick={handleClickEn}>
                     <p className='mx-1'>English</p>
