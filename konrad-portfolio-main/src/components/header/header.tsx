@@ -22,11 +22,21 @@ function Header() {
   })
 
   return (
-    <div id='topNav' className='w-full h-full relative flex items-center duration-300'>  
-      <div className='overflow-hidden'>
-        <nav id='nav' className="nav glass z-40 absolute right-0 top-0 flex justify-center items-center font-inter duration-300">
-          <div className='z-50 h-full w-4/5 flex justify-between items-center flex-col'>
-            <div id='nav-links' className='hidden opacity-0 text-center delay-200'>
+    <div id='topNav' className='w-full h-full relative flex items-center duration-300 @container @5xl:justify-between'>     
+      <div className='h-full w-full flex items-center relative z-30 duration-300 @5xl:w-1/2'>
+        <header className="h-full w-full flex items-center justify-between relative">
+          <div id="logo" className="w-[20%] ml-5 pt-1.5 @3xl:ml-9">
+            <Link href="/" className='font-kufam font-normal text-[32px] leading-none'>KD</Link>
+          </div>           
+        </header>
+      </div>
+      <div className='h-full flex justify-center items-center w-1/5 z-90 @5xl:hidden'>
+        <MenuButton></MenuButton>
+      </div>
+      <div className='overflow-hidden @5xl:w-1/2 @5xl:h-full'>
+        <nav id='nav' className="nav z-40 absolute right-0 top-0 flex justify-center items-center font-inter duration-300 @5xl:w-full @5xl:h-full @5xl:">
+          <div className='z-50 h-full w-4/5 flex justify-between items-center flex-col @5xl:justify-center @5xl:items-end'>
+            <div id='nav-links' className='hidden opacity-0 text-center delay-200 @5xl:flex @5xl:opacity-100 @5xl:'>
               <div className='z-20 mb-4 mt-10 nav-link'>
                 <Link id='home' href="/">Home</Link>
               </div>
@@ -42,16 +52,6 @@ function Header() {
             </div>
           </div> 
         </nav>
-      </div>
-      <div className='h-full w-full flex items-center relative z-30 duration-300'>
-        <header className="h-full w-full flex items-center justify-between relative">
-          <div id="logo" className="w-[20%] ml-5 pt-[6px]">
-            <Link href="/" className='font-kufam font-normal text-[32px] leading-none'>KD</Link>
-          </div>           
-        </header>
-      </div>
-      <div className='h-full flex justify-center items-center w-1/5 z-90'>
-        <MenuButton></MenuButton>
       </div>
     </div>
   )

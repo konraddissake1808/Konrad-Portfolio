@@ -242,8 +242,9 @@ body {
 #nav {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
-  backdrop-filter: blur(4.7x);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  overflow: hidden;
 }
 
 #nav.scrolled {
@@ -280,4 +281,46 @@ body {
   background: var(--contactOptionBg);
   color: var(--foreground);
   border-radius: 4px;
+}
+
+@media (width > 1023px) {
+  .nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    margin: 0 0 0 32px;
+  }
+
+  /*.glass {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    border: none;
+  }*/
+
+  /*.mobile-nav-glass {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    border: none;
+  }*/
+
+  #nav {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  
+  #nav.scrolled {
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: none;
+  }
 }

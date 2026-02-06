@@ -5,14 +5,6 @@ import { useEffect, useState, useCallback, useRef } from "react";
 
 function Homepage() {
 
-    /*const rolesArray = [
-        "Fullstack Developer",
-        "Frontend Developer",
-        "Backend Developer",
-        "Mobile Developer",
-        "UI/UX Designer",
-    ]*/
-
     const jobData = [
         {
         title: "FULLSTACK DEVELOPER",
@@ -150,22 +142,22 @@ function Homepage() {
 
 
   return (
-    <div className='w-full h-[80vh]'>
+    <div className='w-full h-[80vh] @container'>
       <div className="relative w-full h-full flex items-center justify-center">
         <div id="content" className="z-10 h-full w-full flex justify-center items-center">
           <div className="flex flex-col">
             <div className="mb-8 flex flex-col items-center justify-center">
               <div className="text-center mb-4">
-                <p id='firstAnimation' className="text-4xl mb-1 animated">Konrad Dissake</p>
+                <p id='firstAnimation' className="text-4xl mb-1 animated @3xl:text-5xl">Konrad Dissake</p>
               </div>
               <div className=' w-64'>
                 <div id='secondAnimation' className="subtitle-container text-center animated mb-4 h-6">
-                  <p id='title'></p>
+                  <p id='title' className='text-lg @3xl:text-xl'></p>
                 </div>
                 <div id='thirdAnimation' className="description animated mb-6 h-20">
                   <div className="description-container text-center">
                     <div className="description">
-                      <p id='titleDescription'>{descriptionText}</p>
+                      <p id='titleDescription' className='text-base @3xl:text-lg'>{descriptionText}</p>
                     </div>
                   </div>
                 </div>
