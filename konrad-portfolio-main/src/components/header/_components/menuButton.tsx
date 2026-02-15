@@ -1,10 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-interface MenuButton {
-    menuState?: boolean;
-}
-
 function MenuButton() {
     const [openMenu, setOpenMenu] = useState(false);
 

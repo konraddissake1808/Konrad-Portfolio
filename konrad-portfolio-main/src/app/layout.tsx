@@ -5,15 +5,18 @@ import Header from "../components/header/header";
 import SideNav from "../components/sideNav/sideNav";
 import Footer from "../components/footer/footer";
 import { Suspense } from "react";
+import CursorGlow from "@/components/cursorGlow/cursorGlow";
 
 const kufam = Kufam({
   variable: "--font-kufam",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -29,24 +32,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body"
-        className={`${kufam.variable} ${inter.variable} relative h-screen w-full antialiased flex flex-col justify-between`}
+        className={`${kufam.variable} ${inter.variable} font-sans relative h-screen w-full antialiased flex flex-col justify-between overflow-x-hidden`}
       >
-        
-        <div className="relative">
+        <CursorGlow></CursorGlow>
+        <div className="@container relative">
           <div className="sticky z-40 top-0">
-            <div className="relative h-[10vh] flex items-center">
+            <div className="relative h-[10vh] z-30 flex items-center">
               <Suspense fallback={<div>Loading...</div>}>
                 <Header></Header>
               </Suspense>
             </div>
           </div>
-          <main className="overfow-hidden min-h-[80vh]">
-            {children}
-          </main>
-          <div className="h-[10vh] flex justify-center items-center w-full z[100] sticky bottom-0">
-            <SideNav></SideNav>
+          <div className="@6xl:w-full @6xl:flex @6xl:flex-row-reverse @6xl:justify-end">
+            <main className="min-h-[80vh] @6xl:w-full @6xl:min-h-[90vh]">
+              {children}
+            </main>
+            <div className="h-[10vh] flex justify-center items-center w-full z-100 sticky bottom-0 @5xl:overflow-hidden @6xl:h-[80vh] @6xl:w-20 @6xl:sticky @6xl:top-18 @6xl:items-end @6xl:mb-18 @6xl:z-30">
+              <SideNav></SideNav>
+            </div>
           </div>
-          <div>
+          <div className="">
             <Footer></Footer>
           </div>
         </div>

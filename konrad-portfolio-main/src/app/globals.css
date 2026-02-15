@@ -47,10 +47,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   scrollbar-gutter: stable;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-#background-image {
+.background-image {
   background-image: url('../../public/20230929131352_IMG_4852\ \(1\).jpg');
+  background-color: #000000;
 }
 
 .ham {
@@ -99,32 +101,38 @@ body {
   width: 0;
   height: 0;
   border-radius: 16px 0 16px 16px;
+  z-index: 40;
+  overflow: hidden;
 }
 
 .open-nav {
-  width: 182px;
+  width: min(182px, 75vw);
   height: 216px;
   overflow: hidden;
+  z-index: 40;
 }
 
 @media (320px < width < 376px) {
   .open-nav {
-    width: 200px;
+    width: min(180px, 75vw);
     height: 216px;
+    overflow: hidden;
   }
 }
 
 @media (375px < width < 431px) {
   .open-nav {
-    width: 220px;
+    width: min(200px, 75vw);
     height: 216px;
+    overflow: hidden;
   }
 }
 
 @media (431px < width < 1024px) {
   .open-nav {
-    width: 320px;
+    width: min(300px, 75vw);
     height: 216px;
+    overflow: hidden;
   }
 }
 
@@ -152,7 +160,7 @@ body {
   -webkit-backdrop-filter: blur(4.7px);
   backdrop-filter: blur(4.7px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 0;
+  z-index: 5;
 }
 
 .home-works-button {
@@ -162,7 +170,7 @@ body {
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 0;
+  z-index: 5;
 }
 
 #about-photo {
@@ -232,8 +240,8 @@ body {
 #topNav.scrolled::before {
   background: rgba(255, 255, 255, 0.175);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   /*border: 1px solid rgba(255, 255, 255, 0.08);*/
   z-index: -1;
   transition: 300ms;
@@ -266,21 +274,223 @@ body {
   color: white;
 }
 
+textarea.contactInput {
+  min-height: 160px;
+  resize: none;
+  overflow: auto;
+}
+
 #contactSendButton {
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(4.7px);
   backdrop-filter: blur(4.7px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 8px 16px;
+  /*padding: 8px 16px;*/
   border-radius: 8px;
   width: fit-content;
+  transition: 200ms;
 } 
+#contactSendButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /*padding: 8px 16px;*/
+  border-radius: 8px;
+  width: fit-content;
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+}
 
 .subjectOption {
   background: var(--contactOptionBg);
   color: var(--foreground);
   border-radius: 4px;
+}
+
+.nav-link-content {
+  position: relative;
+  display: inline-block;
+}
+  
+.nav-link-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+  
+.nav-link-content:hover::after {
+  transform: scaleX(1);
+}
+  
+.nav-link-content.active-link::after {
+  transform: scaleX(1);
+}
+
+.project-component {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 300ms;
+}
+
+.project-component:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-about-button {
+  opacity: 1;
+  background-color: rgba(170, 170, 170, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+  transition: 300ms;
+}
+
+.home-works-button {
+  opacity: 1;
+  background: rgba(85, 85, 85, 0.01);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+  transition: 300ms;
+}
+
+.home-about-button:hover {
+  opacity: 1;
+  background-color: rgba(220, 220, 220, 0.2);
+  box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+}
+
+.home-works-button:hover {
+  opacity: 1;
+  background: rgba(155, 155, 155, 0.15);
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+}
+
+#about-works-button:hover {
+  opacity: 1;
+  background-color: rgba(220, 220, 220, 0.2);
+  box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+}
+
+#resume-button {
+  opacity: 1;
+  background: rgba(85, 85, 85, 0.01);
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+  transition: 300ms;
+}
+
+#resume-button:hover {
+  opacity: 1;
+  background: rgba(155, 155, 155, 0.15);
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 5;
+}
+
+.resume-dropdown {
+  height: 0;
+  opacity: 0;
+  transition: height 150ms ease, opacity 150ms ease;
+  animation: dropdownOpen 300ms ease forwards;
+  overflow: hidden;
+}
+
+#X {
+  transition: 100ms;
+}
+
+#X:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+#github {
+  transition: 100ms;
+}
+
+#github:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+#linkedIn {
+  transition: 100ms;
+}
+
+#linkedIn:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+#instagram {
+  transition: 100ms;
+}
+
+#instagram:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+#facebook {
+  transition: 100ms;
+}
+
+#facebook:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+#youtube {
+  transition: 100ms;
+}
+
+#youtube:hover {
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+}
+
+@keyframes dropdownOpen {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 82px;
+    opacity: 1;
+  }
 }
 
 @media (width > 1023px) {
@@ -296,19 +506,32 @@ body {
     margin: 0 0 0 32px;
   }
 
-  /*.glass {
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    border: none;
-  }*/
+  .nav-link-content {
+    position: relative;
+    display: inline-block;
+  }
 
-  /*.mobile-nav-glass {
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    border: none;
-  }*/
+  .nav-link-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+  
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  
+  .nav-link-content:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .nav-link-content.active-link::after {
+    transform: scaleX(1);
+  }
 
   #nav {
     background: none;
@@ -322,5 +545,210 @@ body {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     border: none;
+  }
+
+  .cursor-glow {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    background: -moz-radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(000, 000, 000, 0.0001) 100%);
+    /*box-shadow: 0px 0px 20px rgba(055,055,055,1);*/
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(000, 000, 000, 0.0001) 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    display: none;
+  }
+
+  .cursor-glow.scrolling {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .home-about-button {
+    opacity: 1;
+    background-color: rgba(170, 170, 170, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(4.7px);
+    backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
+  }
+  
+  .home-works-button {
+    opacity: 1;
+    background: rgba(85, 85, 85, 0.01);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
+  }
+
+  .home-about-button:hover {
+    opacity: 1;
+    background-color: rgba(220, 220, 220, 0.2);
+    box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
+    -webkit-backdrop-filter: blur(4.7px);
+    backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+  }
+  
+  .home-works-button:hover {
+    opacity: 1;
+    background: rgba(155, 155, 155, 0.15);
+    box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+  }
+
+  #about-works-button:hover {
+    opacity: 1;
+    background: rgba(155, 155, 155, 0.15);
+    box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
+  }
+}
+
+@media (width > 1279px) {
+  .nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    margin: 0 0 0 32px;
+  }
+
+  .nav-link-content {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link-content:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-link-content.active-link::after {
+    transform: scaleX(1);
+  }
+
+  #nav {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  #nav.scrolled {
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: none;
+  }
+
+  .cursor-glow {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    background: -moz-radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(000, 000, 000, 0.0001) 100%);
+    /*box-shadow: 0px 0px 20px rgba(055,055,055,1);*/
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(000, 000, 000, 0.0001) 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    display: inline;
+  }
+
+  .cursor-glow.scrolling {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .home-about-button {
+    opacity: 1;
+    background-color: rgba(170, 170, 170, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(4.7px);
+    backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
+  }
+
+  .home-works-button {
+    opacity: 1;
+    background: rgba(85, 85, 85, 0.01);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
+  }
+
+  .home-about-button:hover {
+    opacity: 1;
+    background-color: rgba(220, 220, 220, 0.2);
+    box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
+    -webkit-backdrop-filter: blur(4.7px);
+    backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+  }
+
+  .home-works-button:hover {
+    opacity: 1;
+    background: rgba(155, 155, 155, 0.15);
+    box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+  }
+
+  #about-works-button:hover {
+    opacity: 1;
+    background: rgba(155, 155, 155, 0.15);
+    box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 5;
+    transition: 300ms;
   }
 }

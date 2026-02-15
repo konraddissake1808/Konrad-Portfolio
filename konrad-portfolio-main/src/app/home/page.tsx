@@ -128,6 +128,10 @@ function Homepage() {
     useEffect(() => {
       const homeAboutButton = document.getElementById('home-about-button');
       const homeWorksButton = document.getElementById('home-works-button');
+      const homeLink = document.getElementById('home');
+      const aboutLink = document.getElementById('about');
+      const workLink = document.getElementById('work');
+      const contactLink = document.getElementById('contact');
 
       onload = () => {
         if (homeAboutButton) {
@@ -137,43 +141,56 @@ function Homepage() {
           homeWorksButton.classList.add('home-works-button');
         }
       }
+      document.addEventListener('click', (e) => {
+        if(e.target === homeAboutButton) {
+          aboutLink?.classList.add('active-link');
+          homeLink?.classList.remove('active-link');
+          workLink?.classList.remove('active-link');
+          contactLink?.classList.remove('active-link');
+        } else if(e.target === homeWorksButton) {
+          workLink?.classList.add('active-link');
+          homeLink?.classList.remove('active-link');
+          aboutLink?.classList.remove('active-link');
+          contactLink?.classList.remove('active-link');
+        }
+      })
     }, []);
 
 
 
   return (
-    <div className='w-full h-[80vh] @container'>
+    <div className='w-full h-[80vh] @container @6xl:h-[90vh]'>
       <div className="relative w-full h-full flex items-center justify-center">
-        <div id="content" className="z-10 h-full w-full flex justify-center items-center">
+        <div id="content" className="z-10 h-full w-full flex justify-center items-center @5xl:justify-start @5xl:pl-40 @6xl:pl-52">
           <div className="flex flex-col">
-            <div className="mb-8 flex flex-col items-center justify-center">
+            <div className="mb-8 flex flex-col items-center justify-center @3xl:items-center @5xl:items-start">
               <div className="text-center mb-4">
                 <p id='firstAnimation' className="text-4xl mb-1 animated @3xl:text-5xl">Konrad Dissake</p>
               </div>
-              <div className=' w-64'>
-                <div id='secondAnimation' className="subtitle-container text-center animated mb-4 h-6">
+              <div className='w-64'>
+                <div id='secondAnimation' className="subtitle-container text-center animated mb-4 h-6 @5xl:text-justify">
                   <p id='title' className='text-lg @3xl:text-xl'></p>
                 </div>
                 <div id='thirdAnimation' className="description animated mb-6 h-20">
-                  <div className="description-container text-center">
+                  <div className="description-container text-center @5xl:text-justify">
                     <div className="description">
                       <p id='titleDescription' className='text-base @3xl:text-lg'>{descriptionText}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id='thirdAnimation' className="flex justify-around fade-in">
-                <div id='home-about-button' className="h-10 mr-6 w-24 flex justify-center items-center rounded-xs home-about-button">
-                  <Link className="" href='/about'>About</Link>
+              <div id='thirdAnimation' className="flex justify-around fade-in @5xl:w-full">
+                <div className="h-10 mr-6 w-24 flex justify-center items-center rounded-xs">
+                  <Link id='home-about-button' className="px-7 py-2" href='/about'>About</Link>
                 </div>
-                <div id="Home-works-button" className="h-10 w-24 flex justify-center items-center rounded-xs home-works-button">
-                  <Link className="" href='/works'>Works</Link>
+                <div className="h-10 w-24 flex justify-center items-center rounded-xs">
+                  <Link id="home-works-button" className="px-7 py-2" href='/works'>Works</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="background-image" className="absolute z-0 h-full w-full top-0 bg-contain bg-no-repeat bg-center"></div>
+        <div id="" className="background-image absolute z-0 h-full w-full top-0 bg-contain bg-no-repeat bg-center @5xl:bg-right @6xl:right-28 @6xl:h-[80vh]"></div>
       </div>
     </div>
   )
