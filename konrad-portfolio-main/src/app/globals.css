@@ -30,14 +30,20 @@
 :root {
   --background: #000000;
   --foreground: #ededed;
-  color-scheme: dark;
+  color-scheme: dark light;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #000000;
     --foreground: #ededed;
     --contactOptionBg: #4e4e4e;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    forced-color-adjust: none;
   }
 }
 

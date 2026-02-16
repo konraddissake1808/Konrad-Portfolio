@@ -40,7 +40,7 @@ function About() {
                     </div>
                   </div>
                 </div>
-                <div className='flex flex-col items-center h-[80vh] justify-center @5xl:items-start @5xl:pl-20'>
+                <div className='flex flex-col items-center justify-center @5xl:items-start @5xl:pl-20'>
                   <div className='w-4/5 mb-10 text-lg @5xl:w-3/5 @3xl:text-center @5xl:text-left'>
                     <p className='mb-4 font-semibold'>Hi, I am Konrad Dissake, a Fullstack Web Developer and Software Engineer from Douala, Cameroon.</p>
                     <p className='mb-4'>I am focused on building reliable, maintainable software systems. My work emphasizes structure, predictability, and long-term scalability rather than short-term solutions.</p>
