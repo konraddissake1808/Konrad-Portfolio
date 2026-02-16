@@ -43,7 +43,7 @@ function ResumeButton() {
         </div>
         <div ref={dropdownRef} className='hidden absolute right-0 -top-21.5 glass rounded-md duration-300 resume-dropdown'>
             <div className='py-2 px-4 hover:bg-gray-400 duration-200 cursor-pointer' onClick={handleClickEn}>
-                <button className='flex justify-center items-center' onClick={handleClickEn}>
+                <button className='flex justify-center items-center cursor-pointer' onClick={handleClickEn}>
                     <p className='mx-1'>English</p>
                     <div className='w-5 h-5 flex justify-center items-center'>
                         <Image alt='' src={englishIcon} />
@@ -51,7 +51,7 @@ function ResumeButton() {
                 </button>
             </div>
             <div className='py-2 px-4 hover:bg-gray-400 duration-200 cursor-pointer' onClick={handleClickFr}>
-                <button className='flex justify-center items-center' onClick={handleClickFr}>
+                <button className='flex justify-center items-center cursor-pointer' onClick={handleClickFr}>
                     <p className='mx-1'>Français</p>
                     <div className='w-5 h-5'>
                         <Image alt='' src={frenchIcon} />

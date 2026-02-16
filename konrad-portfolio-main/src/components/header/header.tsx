@@ -22,55 +22,6 @@ function Header() {
     });
   })
 
-  /*useEffect(() => {
-    const homeLink = document.getElementById('home');
-    const aboutLink = document.getElementById('about');
-    const workLink = document.getElementById('work');
-    const contactLink = document.getElementById('contact');
-
-    function homeActive() {
-      homeLink?.classList.add('active-link');
-      aboutLink?.classList.remove('active-link');
-      workLink?.classList.remove('active-link');
-      contactLink?.classList.remove('active-link');
-    }
-
-    function aboutActive() {
-      aboutLink?.classList.add('active-link');
-      homeLink?.classList.remove('active-link');
-      workLink?.classList.remove('active-link');
-      contactLink?.classList.remove('active-link');
-    }
-
-    function worksActive() {
-      workLink?.classList.add('active-link');
-      homeLink?.classList.remove('active-link');
-      aboutLink?.classList.remove('active-link');
-      contactLink?.classList.remove('active-link');
-    }
-
-    function contactActive() {
-      contactLink?.classList.add('active-link');
-      homeLink?.classList.remove('active-link');  
-      aboutLink?.classList.remove('active-link');
-      workLink?.classList.remove('active-link');
-    }
-
-    document.addEventListener('click', (e) => {
-      if(e.target === homeLink) {
-        homeActive()
-      } else if(e.target === aboutLink) {
-        aboutActive()
-      } else if(e.target === workLink) {
-        worksActive()
-      } else if(e.target === contactLink) {
-        contactActive()
-      }
-    })
-  }, [])*/
-
-  
-
   const pathname = usePathname();
 
   useEffect(() => {

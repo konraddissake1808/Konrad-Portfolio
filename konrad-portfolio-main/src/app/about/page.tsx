@@ -23,8 +23,8 @@ function About() {
       }, []);
 
   return (
-    <div className='@container'>
-      <div>
+    <div className='@container @7xl:flex @7xl:items-center @7xl:justify-center'>
+      <div className='@7xl:w-360'>
         <div>
           <div className='w-full flex flex-col items-center justify-center mb-24'>
             <div className='overflow-hidden relative flex flex-col items-center justify-center mb-10 h-full w-full overflow-y-auto noScrollbar'>
@@ -32,18 +32,21 @@ function About() {
               <div className='absolute top-0 z-30 flex flex-col items-center justify-center @5xl:left-0 @3xl:items-start @5xl:ml-20 @6xl:pl-0'>
                 <div className='h-[80vh] flex flex-col items-center justify-center @5xl:items-start @3xl:items-center @3xl:w-full @5xl:pl-20'>
                   <div>
-                    <h1 className='text-5xl font-space-grotesk font-semibold'>About</h1>
+                    <h1 className='text-5xl font-space-grotesk font-semibold'>About Me</h1>
                   </div>
                   <div className='flex flex-col items-center justify-center mt-4 mb-4 @5xl:items-start'>
                     <div className='w-4/5 text-center text-lg @5xl:text-left @5xl:w-4/5'>
-                      <p className=''>In this section is a presentation of myself, and technologies I use</p>
+                      <p className=''>Background, approach, and the principles behind my work.</p>
                     </div>
                   </div>
                 </div>
                 <div className='flex flex-col items-center h-[80vh] justify-center @5xl:items-start @5xl:pl-20'>
                   <div className='w-4/5 mb-10 text-lg @5xl:w-3/5 @3xl:text-center @5xl:text-left'>
-                    <p className='mb-4'>I am Konrad Dissake, a Fullstack Web Developer and Software Engineer from Douala, Cameroon.</p>
-                    <p>I am a self-taught developer with a passion for learning and building new things starting my coding journey since 2021.</p>
+                    <p className='mb-4 font-semibold'>Hi, I am Konrad Dissake, a Fullstack Web Developer and Software Engineer from Douala, Cameroon.</p>
+                    <p className='mb-4'>I am focused on building reliable, maintainable software systems. My work emphasizes structure, predictability, and long-term scalability rather than short-term solutions.</p>
+                    <p className='mb-4'>I approach development as system design. Every project is organized around clear architecture, readable code, and components that can evolve without introducing unnecessary complexity. I value consistency, performance, and strong technical foundations.</p>
+                    <p className='mb-4'>I primarily work with modern web technologies to design and implement fullstack applications, with attention to API structure, data flow, and interface reliability. My goal is to create software that remains understandable and stable as it grows.</p>
+                    <p>I continuously refine my engineering practices to improve how I design, document, and maintain systems over time.</p>
                   </div>
                 </div>
               </div>

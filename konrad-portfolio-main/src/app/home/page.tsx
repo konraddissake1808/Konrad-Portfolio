@@ -159,12 +159,13 @@ function Homepage() {
 
 
   return (
-    <div className='w-full h-[80vh] @container @6xl:h-[90vh]'>
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div id="content" className="z-10 h-full w-full flex justify-center items-center @5xl:justify-start @5xl:pl-40 @6xl:pl-52">
+    <div className='w-full h-[80vh] @container @6xl:h-[90vh] @7xl:flex @7xl:items-center @7xl:justify-center'>
+      <div className="relative w-full h-full flex items-center justify-center @7xl:w-360">
+        <div id="content" className="z-10 h-full w-full flex justify-center items-center @5xl:justify-start @5xl:pl-40 @6xl:pl-40">
           <div className="flex flex-col">
             <div className="mb-8 flex flex-col items-center justify-center @3xl:items-center @5xl:items-start">
               <div className="text-center mb-4">
+                <p id='firstAnimation' className="font-space-grotesk font-semibold text-4xl mb-1 animated @3xl:text-5xl @5xl:text-left">Hi, I'm</p>
                 <p id='firstAnimation' className="font-space-grotesk font-semibold text-4xl mb-1 animated @3xl:text-5xl">Konrad Dissake</p>
               </div>
               <div className='w-64'>
