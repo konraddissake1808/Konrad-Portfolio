@@ -28,6 +28,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Konrad Dissake",
   description: "Konrad Dissake, Fullstack Web developer personal portfolio website",
+  colorScheme: "dark light",
 };
 
 export default function RootLayout({
