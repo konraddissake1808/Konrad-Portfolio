@@ -3,6 +3,7 @@
 @theme {
   --font-kufam: var(--font-kufam);
   --font-inter: var(--font-inter);
+  --font-space-grotesk: var(--font-space-grotesk);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -353,7 +354,7 @@ textarea.contactInput {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.home-about-button {
+#home-about-button {
   opacity: 1;
   background-color: rgba(170, 170, 170, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -364,7 +365,7 @@ textarea.contactInput {
   transition: 300ms;
 }
 
-.home-works-button {
+#home-works-button {
   opacity: 1;
   background: rgba(85, 85, 85, 0.01);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -375,7 +376,7 @@ textarea.contactInput {
   transition: 300ms;
 }
 
-.home-about-button:hover {
+#home-about-button:hover {
   opacity: 1;
   background-color: rgba(220, 220, 220, 0.2);
   box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
@@ -385,7 +386,7 @@ textarea.contactInput {
   z-index: 5;
 }
 
-.home-works-button:hover {
+#home-works-button:hover {
   opacity: 1;
   background: rgba(155, 155, 155, 0.15);
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);
@@ -435,51 +436,63 @@ textarea.contactInput {
 }
 
 #X {
-  transition: 100ms;
+  transition: 150ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #X:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 #github {
-  transition: 100ms;
+  transition: 150ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #github:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 #linkedIn {
-  transition: 100ms;
+  transition: 150ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #linkedIn:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 #instagram {
-  transition: 100ms;
+  transition: 150ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #instagram:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 #facebook {
-  transition: 100ms;
+  transition: 150ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #facebook:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 #youtube {
   transition: 100ms;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #youtube:hover {
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 @keyframes dropdownOpen {
@@ -569,7 +582,7 @@ textarea.contactInput {
     pointer-events: none;
   }
 
-  .home-about-button {
+  #home-about-button {
     opacity: 1;
     background-color: rgba(170, 170, 170, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -577,10 +590,10 @@ textarea.contactInput {
     backdrop-filter: blur(4.7px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 5;
-    transition: 300ms;
+    transition: 150ms;
   }
   
-  .home-works-button {
+  #home-works-button {
     opacity: 1;
     background: rgba(85, 85, 85, 0.01);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -588,10 +601,10 @@ textarea.contactInput {
     backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 5;
-    transition: 300ms;
+    transition: 150ms;
   }
 
-  .home-about-button:hover {
+  #home-about-button:hover {
     opacity: 1;
     background-color: rgba(220, 220, 220, 0.2);
     box-shadow: 0 0 30px rgba(230, 230, 230, 0.2);
@@ -601,7 +614,7 @@ textarea.contactInput {
     z-index: 5;
   }
   
-  .home-works-button:hover {
+  #home-works-button:hover {
     opacity: 1;
     background: rgba(155, 155, 155, 0.15);
     box-shadow: 0 0 30px rgba(200, 200, 200, 0.2);

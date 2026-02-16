@@ -123,7 +123,7 @@ function Header() {
       <div className='h-full w-full flex items-center relative z-30 duration-300 @5xl:w-1/2'>
         <header className="h-full w-full flex items-center justify-between relative">
           <div id="logo" className="w-[20%] ml-5 pt-1.5 @3xl:ml-9">
-            <Link href="/" className='font-kufam font-normal text-[32px] leading-none'>KD</Link>
+            <Link href="/" className='font-space-grotesk font-normal text-[32px] leading-none'>KD</Link>
           </div>           
         </header>
       </div>

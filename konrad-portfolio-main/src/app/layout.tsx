@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Kufam, Inter } from "next/font/google";
+import { Kufam, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header/header";
 import SideNav from "../components/sideNav/sideNav";
@@ -19,6 +19,12 @@ const inter = Inter({
   display: "swap",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Konrad Dissake",
   description: "Konrad Dissake, Fullstack Web developer personal portfolio website",
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body"
-        className={`${kufam.variable} ${inter.variable} font-sans relative h-screen w-full antialiased flex flex-col justify-between overflow-x-hidden`}
+        className={`${kufam.variable} ${inter.variable} ${spaceGrotesk.variable} font-sans relative h-screen w-full antialiased flex flex-col justify-between overflow-x-hidden`}
       >
         <CursorGlow></CursorGlow>
         <div className="@container relative">

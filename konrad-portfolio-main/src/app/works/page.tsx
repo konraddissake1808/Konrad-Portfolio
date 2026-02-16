@@ -8,7 +8,7 @@ function Works() {
       <div className='h-[80vh] w-full flex flex-col items-center justify-center mb-24'>
         <div className='flex flex-col items-center justify-center mb-10 h-full'>
           <div>
-            <h1 className='text-5xl'>Works</h1>
+            <h1 className='text-5xl font-semibold font-space-grotesk'>Works</h1>
           </div>
           <div className='flex flex-col items-center justify-center mt-4'>
             <div className='w-4/5 text-center'>
@@ -24,9 +24,9 @@ function Works() {
               <div className='rounded-lg mb-4 @5xl:mb-0 @5xl:mr-6 @5xl:h-full @5xl:w-[40%]'>
                 <Image className='rounded-t-lg' src={weatherAppImage} alt="" />
               </div>
-              <div className='w-[90%] mb-6 @5xl:my-4 @5xl:w-[60%]'>
+              <div className='w-[90%] mb-6 @5xl:my-6 @5xl:w-[60%]'>
                 <div className='mb-4'>
-                  <div className='mb-2 text-2xl'>
+                  <div className='mb-2 text-2xl font-space-grotesk font-semibold'>
                     <p>Weather Now</p>
                   </div>
                   <div className='text-lg'>

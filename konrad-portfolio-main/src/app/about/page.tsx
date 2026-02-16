@@ -26,13 +26,13 @@ function About() {
     <div className='@container'>
       <div>
         <div>
-          <div className='w-full flex flex-col items-center justify-center mb-16'>
+          <div className='w-full flex flex-col items-center justify-center mb-24'>
             <div className='overflow-hidden relative flex flex-col items-center justify-center mb-10 h-full w-full overflow-y-auto noScrollbar'>
               <div id="" className="background-image sticky z-0 h-[80vh] w-full top-0 bg-contain bg-no-repeat bg-center @3xl:bg-center  @5xl:bg-right @6xl:mr-56"></div>
               <div className='absolute top-0 z-30 flex flex-col items-center justify-center @5xl:left-0 @3xl:items-start @5xl:ml-20 @6xl:pl-0'>
                 <div className='h-[80vh] flex flex-col items-center justify-center @5xl:items-start @3xl:items-center @3xl:w-full @5xl:pl-20'>
                   <div>
-                    <h1 className='text-5xl'>About</h1>
+                    <h1 className='text-5xl font-space-grotesk font-semibold'>About</h1>
                   </div>
                   <div className='flex flex-col items-center justify-center mt-4 mb-4 @5xl:items-start'>
                     <div className='w-4/5 text-center text-lg @5xl:text-left @5xl:w-4/5'>
@@ -50,13 +50,15 @@ function About() {
             </div>
           </div>
           <div className=''>
-            <div className='mb-10 flex flex-col items-center'>
-              <p className='text-2xl w-3/4 mb-4 @3xl:text-3xl @3xl:mb-16 @3xl:'>Tech Stack</p>
+            <div className='mb-24 flex flex-col items-center'>
+              <div className='w-4/5'>
+                <p className='font-space-grotesk text-3xl w-3/4 mb-4 @3xl:text-4xl @3xl:mb-16'>Tech Stack</p>
+              </div>
               <div className='w-full flex flex-col items-center justify-center'>
                 <div className='h-full w-full flex justify-center'>
                   <div className='w-4/5 col-start-1 row-start-1' id='frontend-container'>
                     <div className='w-full flex flex-col mb-6 @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 text-xl @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full flex items-center mb-3 text-xl @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Programming Languages</p>
                       </div>
                       <div className='text-base @3xl:w-[65%] @3xl:flex @3xl:justify-end'>
@@ -101,7 +103,7 @@ function About() {
                       </div>
                     </div>
                     <div className='mb-6 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full mb-3 flex text-xl @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Frontend Technologies</p>
                       </div>
                       <div className='@3xl:w-[65%]'>
@@ -172,7 +174,7 @@ function About() {
                       </div>
                     </div>
                     <div className='w-full mb-6 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full text-xl flex items-center mb-3 @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Mobile Development</p>
                       </div>
                       <div className='@3xl:w-[65%] @3xl:flex @3xl:justify-end'>
@@ -205,7 +207,7 @@ function About() {
                       </div>
                     </div>
                     <div className='w-full mb-6 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full text-xl flex items-center mb-3 @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Backend Technologies</p>
                       </div>
                       <div className='@3xl:w-[65%]'>
@@ -264,7 +266,7 @@ function About() {
                       </div>
                     </div>
                     <div className='w-full mb-6 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full mb-3 flex items-center text-xl @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Database Technologies</p>
                       </div>
                       <div className='@3xl:w-[65%]'>
@@ -322,7 +324,7 @@ function About() {
                       </div>
                     </div>
                     <div className='w-full mb-6 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-3 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full mb-3 flex items-center text-xl @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>DevOps & Deployment</p>
                       </div>
                       <div className='@3xl:w-[65%]'>
@@ -385,7 +387,7 @@ function About() {
                       </div>  
                     </div>            
                     <div className='w-full mb-4 flex flex-col @3xl:flex-row @3xl:justify-between'>
-                      <div className='w-full mb-4 @3xl:text-2xl @3xl:w-[45%]'>
+                      <div className='w-full mb-4 flex items-center text-xl @3xl:text-2xl @3xl:w-[45%] font-space-grotesk'>
                         <p>Tools & Workflow</p>
                       </div>
                       <div className='@3xl:w-[65%]'>
@@ -448,17 +450,17 @@ function About() {
               </div>
             </div>    
           </div>
-          <div className='w-full flex justify-center items-center flex-col  mb-20'>
-            <div className='w-4/5 mb-10'>
+          <div className='w-full flex justify-center items-center flex-col mb-24'>
+            <div className='w-4/5 mb-10 text-3xl font-space-grotesk @3xl:text-4xl'>
               <p>Experience</p>
             </div>
-            <div className='w-4/5'>
+            <div className='w-4/5 mb-24'>
               <div className='flex flex-col mb-4'>
-                <div className='mb-2'>
+                <div className='mb-2 font-space-grotesk'>
                   <p>Nov 2021 - Feb 2023</p>
                 </div>
                 <div>
-                  <div className='mb-2'>
+                  <div className='mb-2 font-space-grotesk'>
                     <p>Frontend Developer, GENES'ART</p>
                   </div>
                   <div className='mb-4'>
@@ -542,13 +544,13 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className='h-[30vh]'> 
-              <div className='flex justify-center items-center h-full pb-12'>
+            <div className=''> 
+              <div className='flex justify-center items-center h-full'>
                 <div className="flex justify-around">
-                  <div id='about-works-button' className="h-12 w-24 flex justify-center items-center glass rounded-xs mr-4">
+                  <div id='about-works-button' className="h-12 w-24 flex justify-center items-center glass rounded-xs mr-4 font-space-grotesk">
                     <Link className="px-7 py-3" href='/works'>Works</Link>
                   </div>
-                  <div className="flex justify-center items-center rounded-xs cursor-pointer h-12">
+                  <div className="flex justify-center items-center rounded-xs cursor-pointer h-12 font-space-grotesk">
                     <ResumeButton />
                   </div>
                 </div>

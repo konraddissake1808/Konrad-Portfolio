@@ -165,26 +165,26 @@ function Homepage() {
           <div className="flex flex-col">
             <div className="mb-8 flex flex-col items-center justify-center @3xl:items-center @5xl:items-start">
               <div className="text-center mb-4">
-                <p id='firstAnimation' className="text-4xl mb-1 animated @3xl:text-5xl">Konrad Dissake</p>
+                <p id='firstAnimation' className="font-space-grotesk font-semibold text-4xl mb-1 animated @3xl:text-5xl">Konrad Dissake</p>
               </div>
               <div className='w-64'>
                 <div id='secondAnimation' className="subtitle-container text-center animated mb-4 h-6 @5xl:text-justify">
-                  <p id='title' className='text-lg @3xl:text-xl'></p>
+                  <p id='title' className='font-space-grotesk font-medium text-lg @3xl:text-xl'></p>
                 </div>
                 <div id='thirdAnimation' className="description animated mb-6 h-20">
                   <div className="description-container text-center @5xl:text-justify">
                     <div className="description">
-                      <p id='titleDescription' className='text-base @3xl:text-lg'>{descriptionText}</p>
+                      <p id='titleDescription' className='text-base font-normal @3xl:text-lg'>{descriptionText}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id='thirdAnimation' className="flex justify-around fade-in @5xl:w-full">
+              <div id='' className="flex justify-around @5xl:w-full">
                 <div className="h-10 mr-6 w-24 flex justify-center items-center rounded-xs">
-                  <Link id='home-about-button' className="px-7 py-2" href='/about'>About</Link>
+                  <Link id='home-about-button' className="px-6 py-2 font-space-grotesk font-medium" href='/about'>About</Link>
                 </div>
                 <div className="h-10 w-24 flex justify-center items-center rounded-xs">
-                  <Link id="home-works-button" className="px-7 py-2" href='/works'>Works</Link>
+                  <Link id="home-works-button" className="px-6 py-2 font-space-grotesk font-medium" href='/works'>Works</Link>
                 </div>
               </div>
             </div>

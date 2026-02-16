@@ -7,17 +7,17 @@ function Contact() {
       <div className='w-3/4 h-[80vh] mb-36 @3xl:flex @3xl:flex-col @3xl:justify-around @3xl:items-start @5xl:flex-col @5xl:ml-20 @5xl:h-168.75  @5xl:mb-10 @5xl:justify-around'>
         <div className='flex flex-col justify-center items-center h-[60vh] @3xl:h-auto @3xl:items-center @5xl:h-auto'>
           <div className='flex flex-col justify-center items-center w-full @3xl:justify-start'>
-            <h1 className='text-3xl font-semibold mb-8 text-left w-full'>Let's work together</h1>
+            <h1 className='text-3xl font-semibold mb-8 text-left w-full font-space-grotesk font-semibold'>Let's work together</h1>
             <p className='text-lg max-w-2xl mb-8 text-left w-full'>I'm available for freelance work, collaborations, and full-time opportunities. Send a message and I'll respond shortly.</p>
           </div>
         </div>
         <div className='w-full @5xl:mb-14'>
           <div className=''>
-            <p className='text-2xl'>Email Me</p>
+            <p className='text-2xl font-space-grotesk'>Email Me</p>
             <p>konrad.dissakengando@gmail.com</p>
           </div>
           <div className='mt-6'>
-            <p className='text-2xl'>Address</p>
+            <p className='text-2xl font-space-grotesk'>Address</p>
             <p>Douala, Cameroon</p>
         </div>
         </div>
@@ -57,7 +57,7 @@ function Contact() {
             </select>
           </div>
 
-          <div className='mb-4 flex flex-col @3xl:mb-14 @5xl:mb-8'>
+          <div className='mb-4 flex flex-col @3xl:mb-14 @5xl:mb-6'>
             <label htmlFor="message">Message</label>
             <textarea className='contactInput' name="message" placeholder="Message" required />
           </div>
@@ -65,7 +65,7 @@ function Contact() {
           {/* Honeypot */}
           <input name="honeypot" style={{ display: "none" }} />
 
-          <div id='contactSendButton' className='mb-8 @3xl:mb-4'>
+          <div id='contactSendButton' className='mb-8 @3xl:mb-4 @5xl:mb-2'>
             <button className='text-white cursor-pointer py-2 px-4' type="submit">Send</button>
           </div>
           <div className=''>
