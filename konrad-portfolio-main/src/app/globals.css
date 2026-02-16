@@ -30,15 +30,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
     --foreground: #ededed;
     --contactOptionBg: #222222;
   }
-}
+}*/
 
 
 
