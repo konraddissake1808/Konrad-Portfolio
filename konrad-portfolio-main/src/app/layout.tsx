@@ -6,6 +6,7 @@ import SideNav from "../components/sideNav/sideNav";
 import Footer from "../components/footer/footer";
 import { Suspense } from "react";
 import CursorGlow from "@/components/cursorGlow/cursorGlow";
+import type { Viewport } from "next";
 
 const kufam = Kufam({
   variable: "--font-kufam",
@@ -28,8 +29,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Konrad Dissake",
   description: "Konrad Dissake, Fullstack Web developer personal portfolio website",
-  colorScheme: "dark light",
 };
+
+export const viewPort: Viewport = {
+  colorScheme: "dark light"
+}
 
 export default function RootLayout({
   children,
