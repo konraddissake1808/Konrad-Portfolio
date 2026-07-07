@@ -7,6 +7,7 @@ import Footer from "../components/footer/footer";
 import { Suspense } from "react";
 import CursorGlow from "@/components/cursorGlow/cursorGlow";
 import type { Viewport } from "next";
+import { Analytics } from '@vercel/analytics/next';
 
 const kufam = Kufam({
   variable: "--font-kufam",
@@ -66,6 +67,7 @@ export default function RootLayout({
             <Footer></Footer>
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
